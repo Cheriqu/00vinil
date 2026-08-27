@@ -43,7 +43,17 @@ const F = { q: '', sort: 'az', vinil: new Set(), tags: new Set(), genre: new Set
 
 // -------- boot --------
 (async function () {
-  DATA = await (await fetch('catalog.json?_=' + Date.now())).json();
+  try {
+    const r = await fetch('catalog.json?_=' + Date.now());
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    DATA = await r.json();
+  } catch (e) {
+    console.error('catálogo indisponível:', e);
+    $('#grid').innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--muted);padding:40px">' +
+      'Não consegui carregar o catálogo agora. Recarregue a página em instantes.</p>';
+    $('#live').innerHTML = '<span class="dot stale"></span> catálogo indisponível';
+    return;
+  }
   wireContacts();
   buildFilters();
   computeItems();

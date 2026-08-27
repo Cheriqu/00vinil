@@ -156,3 +156,11 @@ img{max-width:100%;display:block}
   .top-links a{padding:6px 10px;font-size:12.5px}
   .controls{top:60px}
 }
+@media (max-width:560px){
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .card-artist{font-size:13.5px}
+  .card-title{font-size:12px}
+  .card-price{font-size:18px}
+  .card-body{padding:10px 11px 12px}
+  .hero{padding-top:26px}
+}

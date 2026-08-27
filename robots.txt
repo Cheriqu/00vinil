@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cheriqu.github.io/00vinil/sitemap.xml
