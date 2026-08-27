@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>00vinil — catálogo</title>
+<meta name="description" content="Catálogo de discos de vinil à venda — 00vinil.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#" aria-label="00vinil">
+    <svg class="logo" viewBox="0 0 190 56" role="img" aria-label="00vinil">
+      <g fill="none" stroke="var(--cream)" stroke-width="4">
+        <circle cx="20" cy="28" r="16"/><circle cx="46" cy="28" r="16"/>
+      </g>
+      <circle cx="20" cy="28" r="4.5" fill="var(--ruby)"/>
+      <circle cx="46" cy="28" r="4.5" fill="var(--ruby)"/>
+      <text x="72" y="38" class="logo-word">vinil</text>
+    </svg>
+  </a>
+  <div class="top-links">
+    <a href="#" data-c="whatsapp" title="WhatsApp">WhatsApp</a>
+    <a href="#" data-c="mercadolivre" title="Mercado Livre">Mercado Livre</a>
+    <a href="#" data-c="shopee" title="Shopee">Shopee</a>
+    <a href="#" data-c="instagram" title="Instagram">Instagram</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Catálogo de vinil</h1>
+  <p class="sub">Todos os discos <b>à venda</b>, direto da nossa prateleira. Fechou negócio? Chama no WhatsApp ou compre pela loja.</p>
+  <div class="live" id="live"></div>
+</section>
+
+<div class="controls">
+  <div class="search">
+    <input id="q" type="search" placeholder="Buscar por artista ou álbum…" autocomplete="off">
+  </div>
+  <select id="sort" aria-label="Ordenar">
+    <option value="az">Artista (A–Z)</option>
+    <option value="price-asc">Preço ↑</option>
+    <option value="price-desc">Preço ↓</option>
+  </select>
+  <button id="filtersBtn" class="btn-filters" aria-expanded="false">Filtros <span id="fcount"></span></button>
+</div>
+
+<aside id="filters" class="filters" hidden></aside>
+
+<div class="count" id="count"></div>
+<main id="grid" class="grid" aria-live="polite"></main>
+<div id="empty" class="empty" hidden>Nada encontrado com esses filtros.</div>
+
+<footer class="foot">
+  <svg class="logo sm" viewBox="0 0 190 56" aria-hidden="true">
+    <g fill="none" stroke="var(--cream)" stroke-width="4"><circle cx="20" cy="28" r="16"/><circle cx="46" cy="28" r="16"/></g>
+    <circle cx="20" cy="28" r="4.5" fill="var(--ruby)"/><circle cx="46" cy="28" r="4.5" fill="var(--ruby)"/>
+    <text x="72" y="38" class="logo-word">vinil</text>
+  </svg>
+  <div class="foot-links" id="footLinks"></div>
+  <p class="fine">Catálogo apenas informativo · a venda é finalizada no WhatsApp, Mercado Livre ou Shopee · preços e disponibilidade seguem a nossa lista em tempo real.</p>
+</footer>
+
+<!-- Modal de detalhe -->
+<div id="modal" class="modal" hidden>
+  <div class="modal-bg" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true">
+    <button class="modal-x" data-close aria-label="Fechar">✕</button>
+    <div class="modal-media">
+      <img id="mImg" alt="">
+      <div id="mThumbs" class="mthumbs"></div>
+    </div>
+    <div class="modal-info">
+      <div id="mArtist" class="m-artist"></div>
+      <div id="mTitle" class="m-title"></div>
+      <div id="mMeta" class="m-meta"></div>
+      <div id="mPills" class="m-pills"></div>
+      <div id="mTags" class="m-tags"></div>
+      <div id="mPrice" class="m-price"></div>
+      <div class="m-cta">
+        <a id="mWhats" class="cta cta-wa" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <a id="mML" class="cta" target="_blank" rel="noopener">Ver no Mercado Livre</a>
+        <a id="mShopee" class="cta" target="_blank" rel="noopener">Ver na Shopee</a>
+      </div>
+      <a id="mDiscogs" class="m-discogs" target="_blank" rel="noopener" hidden>ficha no Discogs ↗</a>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
