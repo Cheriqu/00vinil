@@ -148,6 +148,10 @@ img{max-width:100%;display:block}
 .cta:hover{border-color:var(--cream)}
 .cta-wa{background:var(--ruby);border-color:var(--ruby);color:var(--cream)}
 .cta-wa:hover{filter:brightness(1.08)}
+.cta-ml{background:#FFE600;border-color:#FFE600;color:#2D3277}          /* amarelo Mercado Livre */
+.cta-ml:hover{filter:brightness(1.05)}
+.cta-shopee{background:#EE4D2D;border-color:#EE4D2D;color:#fff}         /* laranja Shopee */
+.cta-shopee:hover{filter:brightness(1.06)}
 .m-discogs{display:inline-block;margin-top:14px;color:var(--muted);font-size:13px}
 .m-discogs:hover{color:var(--cream)}
 
