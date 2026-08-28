@@ -28,12 +28,14 @@ img{max-width:100%;display:block}
 }
 .top-links{display:flex;gap:6px;flex-wrap:wrap}
 .top-links a{
-  font-size:13.5px;font-weight:600;color:var(--muted);padding:7px 12px;border-radius:999px;
-  border:1px solid var(--line);transition:.15s;
+  font-size:13.5px;font-weight:700;color:#fff;padding:7px 13px;border-radius:999px;
+  border:1px solid transparent;transition:.15s;
 }
-.top-links a:hover{color:var(--cream);border-color:var(--cream);background:rgba(244,238,225,.05)}
-.top-links a[data-c="whatsapp"]{color:var(--cream);background:var(--ruby);border-color:var(--ruby)}
-.top-links a[data-c="whatsapp"]:hover{filter:brightness(1.08)}
+.top-links a:hover{filter:brightness(1.08)}
+.top-links a[data-c="whatsapp"]{background:#25D366}
+.top-links a[data-c="mercadolivre"]{background:#FFE600;color:#2D3277}
+.top-links a[data-c="shopee"]{background:#EE4D2D}
+.top-links a[data-c="instagram"]{background:linear-gradient(45deg,#F58529 5%,#DD2A7B 52%,#8134AF 95%)}
 
 /* hero */
 .hero{max-width:var(--maxw);margin:0 auto;padding:38px clamp(16px,4vw,40px) 8px}
@@ -146,7 +148,7 @@ img{max-width:100%;display:block}
 .m-cta{display:flex;flex-direction:column;gap:9px;margin-top:14px}
 .cta{padding:13px 16px;border-radius:12px;text-align:center;font-weight:700;font-size:15px;border:1px solid var(--line)}
 .cta:hover{border-color:var(--cream)}
-.cta-wa{background:var(--ruby);border-color:var(--ruby);color:var(--cream)}
+.cta-wa{background:#25D366;border-color:#25D366;color:#fff}          /* verde WhatsApp */
 .cta-wa:hover{filter:brightness(1.08)}
 .cta-ml{background:#FFE600;border-color:#FFE600;color:#2D3277}          /* amarelo Mercado Livre */
 .cta-ml:hover{filter:brightness(1.05)}
