@@ -80,7 +80,7 @@ async function refreshLive() {
     const col = {
       artist: H.indexOf('artista'),
       title: H.findIndex(x => x === 'titulo' || x === 'title'),
-      vinil: H.indexOf('vinil'), capa: H.indexOf('capa'),
+      vinil: (() => { const i = H.findIndex(x => x === 'vinil' || x === 'vg' || x === 'midia'); return i >= 0 ? i : 2; })(), capa: H.indexOf('capa'),
       price: H.findIndex(x => x.includes('venda')),
       vend: H.findIndex(x => x.includes('vendido')),
     };
